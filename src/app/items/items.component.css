@@ -1,0 +1,134 @@
+/* item-list.component.css */
+body {
+  background-color: #f4f4f9; /* Light background for the page */
+  color: #333; /* Dark text color for readability */
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.filter-container {
+  margin: 20px auto;
+  text-align: center;
+}
+
+.filter-container label {
+  color: #333;
+  font-size: 20px; /* Increased font size */
+  font-weight: 1000; /* Bold font weight */
+  margin-right: 10px;
+}
+
+.filter-container select {
+  background-color: #fff;
+  color: #333;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 400;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.table {
+  width: 90%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  background-color: #ffffff; /* Light table background */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Enhanced shadow */
+  border-radius: 8px; /* Rounded corners */
+}
+
+.table-header {
+  background-color: #007bff;
+  color: #fff;
+  text-align: left;
+  font-weight: 700; /* Bold font weight */
+  font-size: 20px; /* Increased font size */
+  border-bottom: 2px solid #ddd;
+}
+
+.table th {
+  padding: 15px;
+  border: 1px solid #ddd;
+  text-align: left;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.table td {
+  padding: 15px;
+  border: 1px solid #ddd;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.table tr:nth-child(even) {
+  background-color: #f9f9f9; /* Slightly lighter rows for better contrast */
+}
+
+.table tr:hover {
+  background-color: #f1f1f1; /* Light gray color on hover */
+  cursor: pointer;
+}
+
+.available {
+  color: #28a745; /* Green color for available items */
+  font-weight: 600;
+}
+
+.unavailable {
+  color: #dc3545; /* Red color for unavailable items */
+  font-weight: 600;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 25px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 25px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.slider:before {
+  position: absolute;
+  content: '';
+  height: 21px;
+  width: 21px;
+  left: 2px;
+  bottom: 2px;
+  background-color: #fff;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #007bff; /* Blue color when checked */
+}
+
+input:checked + .slider:before {
+  transform: translateX(25px);
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}

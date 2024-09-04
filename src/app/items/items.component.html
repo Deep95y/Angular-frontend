@@ -1,0 +1,30 @@
+<div class="filter-container">
+  <label for="filter">Filter by Availability:</label>
+  <select id="filter" (change)="onFilterChange($event)">
+    <option value="">All</option>
+    <option value="true">Available</option>
+    <option value="false">Unavailable</option>
+  </select>
+</div>
+<table class="table table-striped table-bordered">
+    <thead class="table-header">
+      <tr>
+        <th>Item Name</th>
+        <th>Availability</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of filteredData">
+            <td [ngClass]="{'available': item.Availability, 'unavailable': !item.Availability}">
+                {{ item.Name }}
+            </td>
+            <td>
+              <label class="switch">
+                <input type="checkbox" [checked]="item.Availability"  (change)="onToggleChange($event, item)"/>
+                <span class="slider round"></span>
+              </label>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+  
